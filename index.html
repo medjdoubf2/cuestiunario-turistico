@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Cuestionario de Turistas en Barcelona</title>
+    <style>
+        body {
+            background-image: url('./img\ de\ fond/barcelona.jpg');
+            background-size: cover;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: wheat;
+            text-align: center;
+            padding: 20px;
+        }
+    </style> 
+</head>
+<body>
+
+    <div class="container">
+        <h1>Cuestionario de Turistas</h1>
+        <label for="name">¿Cuál es tu nombre?</label>
+        <input type="text" id="name" required>
+
+        <label for="days">¿Cuántos días planeas quedarte en Barcelona?</label>
+        <input type="number" id="days" min="1" required>
+
+        <label for="preference">¿Prefieres vivir cerca del mar o la montaña?</label>
+        <select id="preference" required>
+            <option value="">Selecciona una opción</option>
+            <option value="mar">Cerca del mar</option>
+            <option value="montaña">Cerca de la montaña</option>
+        </select>
+
+        <h2>Preguntas sobre tu experiencia turística:</h2>
+        <label for="satisfaction">¿Qué tan satisfecho estás con la infraestructura turística de Barcelona?</label>
+        <select id="satisfaction" required>
+            <option value="">Selecciona una opción</option>
+            <option value="muy_satisfecho">Muy satisfecho</option>
+            <option value="satisfecho">Satisfecho</option>
+            <option value="neutral">Neutral</option>
+            <option value="insatisfecho">Insatisfecho</option>
+            <option value="muy_insatisfecho">Muy insatisfecho</option>
+        </select>
+
+        <label for="improvements">¿Qué mejorarías en Barcelona para los turistas?</label>
+        <input type="text" id="improvements" placeholder="Escribe tu respuesta aquí" required>
+
+        <label for="recommendations">¿Recomendarías Barcelona como destino turístico? ¿Por qué?</label>
+        <textarea id="recommendations" rows="3" placeholder="Escribe tu respuesta aquí" required></textarea>
+
+        <button id="submit">Enviar</button>
+
+        <div class="result" id="result"></div>
+    </div>
+
+    <script src="script.js"></script>
+     
+</body>
+</html>
